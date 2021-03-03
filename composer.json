@@ -1,0 +1,24 @@
+{
+    "name": "anguis/brexit",
+    "description": "First project to learn how to use PHPUnit",
+    "type": "project",
+    "require": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Anguis\\Brexit\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Anguis\\Brexit\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Rafał Bieroński",
+            "email": "bieronski@yahoo.pl"
+        }
+    ]
+}
