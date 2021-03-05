@@ -4,8 +4,8 @@
 namespace Anguis\Brexit\PriceCalculation;
 
 
-use Anguis\Brexit\ModifierDetector\PriceModifierDetectorInterface;
-use Anguis\Brexit\ModifierDetector\SellFactorPriceModifierDetector;
+use Anguis\Brexit\PriceCalculation\ModifierDetector\PriceModifierDetectorInterface;
+use Anguis\Brexit\PriceCalculation\ModifierDetector\SellFactorPriceModifierDetector;
 
 class DefaultPriceCalculation implements PriceCalculationInterface
 {

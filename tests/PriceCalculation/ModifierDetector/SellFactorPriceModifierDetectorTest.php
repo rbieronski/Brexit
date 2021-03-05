@@ -1,11 +1,13 @@
 <?php
 
-namespace Anguis\Brexit\Tests\ModifierDetector;
+namespace Anguis\Brexit\Tests\PriceCalculation\ModifierDetector;
 
-use Anguis\Brexit\ModifierDetector\SellFactorNotRecognizedException;
+
 use PHPUnit\Framework\TestCase;
-use Anguis\Brexit\ModifierDetector\SellFactorPriceModifierDetector;
-use Anguis\Brexit\ModifierDetector\PriceModifierDetectorInterface;
+use Anguis\Brexit\PriceCalculation\ModifierDetector\SellFactorNotRecognizedException;
+use Anguis\Brexit\PriceCalculation\ModifierDetector\SellFactorPriceModifierDetector;
+use Anguis\Brexit\PriceCalculation\ModifierDetector\PriceModifierDetectorInterface;
+
 
 class SellFactorPriceModifierDetectorTest extends TestCase
 {

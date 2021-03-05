@@ -1,6 +1,6 @@
 <?php
 
-namespace Anguis\Brexit\ModifierDetector;
+namespace Anguis\Brexit\PriceCalculation\ModifierDetector;
 
 
 
