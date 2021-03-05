@@ -8,6 +8,7 @@ use Anguis\Brexit\Entity\ProductEntity;
 use Anguis\Brexit\PriceCalculation\PriceCalculationInterface;
 use Anguis\Brexit\Repository\ProductRepositoryInterface;
 
+
 class CliRenderer implements RendererInterface
 {
 
@@ -30,6 +31,7 @@ class CliRenderer implements RendererInterface
 
         $headers = $this->productRepository->getHeaders();
         if (!is_null($headers)) {
+
             $headersCount = count($headers);
             for ($i = 0; $i < $headersCount; $i++) {
                 $str .= $headers[$i];

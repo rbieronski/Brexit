@@ -7,11 +7,13 @@ namespace Anguis\Brexit\PriceCalculation;
 use Anguis\Brexit\PriceCalculation\ModifierDetector\PriceModifierDetectorInterface;
 use Anguis\Brexit\PriceCalculation\ModifierDetector\SellFactorPriceModifierDetector;
 
+
 class DefaultPriceCalculation implements PriceCalculationInterface
 {
 
     protected PriceModifierDetectorInterface $priceModifierDetector;
     protected float $exchangeCurrencyRate;
+
 
     public function __construct(
         PriceModifierDetectorInterface $priceModifierDetector,

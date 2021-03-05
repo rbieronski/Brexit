@@ -3,9 +3,9 @@
 namespace Anguis\Brexit\PriceCalculation\ModifierDetector;
 
 
-
 class SellFactorPriceModifierDetector implements PriceModifierDetectorInterface
 {
+
     public function detectModifier($sellFactor): float
     {
         switch ($sellFactor)

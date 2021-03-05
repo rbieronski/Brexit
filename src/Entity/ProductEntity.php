@@ -6,6 +6,7 @@ namespace Anguis\Brexit\Entity;
 
 class ProductEntity
 {
+
     protected string $id;
     protected float $price;
     protected float $sell_factor;

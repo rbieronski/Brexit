@@ -8,6 +8,5 @@ interface ProductRepositoryInterface
 {
 
     public function findAll(): array;
-
     public function getHeaders(): ?array;
 }

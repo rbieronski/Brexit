@@ -10,6 +10,7 @@ use Anguis\Brexit\Reader\ProductReaderInterface;
 
 class ArrayProductRepository implements ProductRepositoryInterface
 {
+
     const SELL_FACTOR_COLUMN_INDEX = 2;
     protected ProductReaderInterface $productReader;
     protected array $repository;

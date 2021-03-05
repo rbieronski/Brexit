@@ -5,11 +5,11 @@ namespace Anguis\Brexit\Tests\Renderer;
 
 use Anguis\Brexit\Entity\ProductEntity;
 use Anguis\Brexit\PriceCalculation\PriceCalculationInterface;
-use Anguis\Brexit\Reader\ProductReaderInterface;
 use Anguis\Brexit\Repository\ProductRepositoryInterface;
 use PHPUnit\Framework\TestCase;
 use Anguis\Brexit\Renderer\CliRenderer;
 use Anguis\Brexit\Renderer\RendererInterface;
+
 
 class CliRenderTest extends TestCase
 {
@@ -62,7 +62,7 @@ class CliRenderTest extends TestCase
         $priceCalculation
             ->method('recalculate')
             ->willReturn(4.111111);
-        // TODO why invoked 2 times
+        // TODO check why invoked 2 times
 
         $renderer = new CliRenderer($productRepository, $priceCalculation);
 
