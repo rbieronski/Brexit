@@ -11,7 +11,7 @@ use Anguis\Brexit\PriceCalculation\DefaultPriceCalculation;
 use Anguis\Brexit\PriceCalculation\PriceCalculationInterface;
 
 
-class PriceCalculationTest extends TestCase
+class DefaultPriceCalculationTest extends TestCase
 {
 
     public function testShouldImplementsProperInterface()
