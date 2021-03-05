@@ -8,6 +8,7 @@ use Anguis\Brexit\Reader\CsvProductReader;
 use Anguis\Brexit\Repository\ArrayProductRepository;
 use Anguis\Brexit\Repository\ProductRepositoryInterface;
 
+
 class ArrayProductRepositoryTest extends \PHPUnit\Framework\TestCase
 {
 
