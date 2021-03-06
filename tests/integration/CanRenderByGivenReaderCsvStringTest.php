@@ -13,7 +13,7 @@ use PHPUnit\Framework\TestCase;
 use Anguis\Brexit\Reader\CsvProductReader;
 
 
-final class CanCreateProductEntityByGivenReaderCSVString extends TestCase
+final class CanRenderByGivenReaderCsvStringTest extends TestCase
 {
 
     private MockObject $csvReader;
