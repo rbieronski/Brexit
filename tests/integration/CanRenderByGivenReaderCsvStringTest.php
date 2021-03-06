@@ -28,30 +28,39 @@ final class CanRenderByGivenReaderCsvStringTest extends TestCase
             array('KK-781',14.50,3)
         );
         $this->csvReader = $this->createMock(ProductReaderInterface::class);
-        $this->csvReader->expects($this->once())
+        $this->csvReader->expects($this->exactly(2))
             ->method('read')
             ->willReturn($arrCsv);
     }
 
-    public function testShouldRenderUsingGivenCsvStringWithSorting()
+    public function testShouldRenderUsingGivenCsvStringWithAndWithoutSorting()
     {
         // Given
-        $repository = new ArrayProductRepository(
+        $repositorySorted = new ArrayProductRepository(
             productReader: $this->csvReader,
             sortDescendingBySellFactor: true,
+            containsHeadersRow: true
+        );
+        $repositoryUnsorted = new ArrayProductRepository(
+            productReader: $this->csvReader,
+            sortDescendingBySellFactor: false,
             containsHeadersRow: true
         );
         $priceCalculation = new DefaultPriceCalculation(
             priceModifierDetector: new SellFactorPriceModifierDetector(),
             exchangeCurrencyRate: 5.26
         );
-        $renderer = new CliRenderer($repository, $priceCalculation);
+        $rendererSorted = new CliRenderer($repositorySorted, $priceCalculation);
+        $rendererUnsorted = new CliRenderer($repositoryUnsorted, $priceCalculation);
 
         // When
-        $rendered = $renderer->render();
+        $renderedSorted = $rendererSorted->render();
+        $renderedUnsorted = $rendererUnsorted->render();
 
         // Then
-        $expected = "id,price,sell_factor\nCD-532,4.95,5\nKK-781,3.17,3\nAS-500,2.24,1\n";
-        $this->assertEquals($expected, $rendered);
+        $expectedSorted = "id,price,sell_factor\nCD-532,4.95,5\nKK-781,3.17,3\nAS-500,2.24,1\n";
+        $expectedUnsorted = "id,price,sell_factor\nAS-500,2.24,1\nCD-532,4.95,5\nKK-781,3.17,3\n";
+        $this->assertEquals($expectedSorted, $renderedSorted);
+        $this->assertEquals($expectedUnsorted, $renderedUnsorted);
     }
 }
