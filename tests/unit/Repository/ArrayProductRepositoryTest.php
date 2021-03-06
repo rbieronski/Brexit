@@ -1,15 +1,15 @@
 <?php
 
 
-namespace Anguis\Brexit\Tests\Repository;
+namespace Anguis\Brexit\Tests\unit\Repository;
 
-
+use PHPUnit\Framework\TestCase;
 use Anguis\Brexit\Reader\CsvProductReader;
 use Anguis\Brexit\Repository\ArrayProductRepository;
 use Anguis\Brexit\Repository\ProductRepositoryInterface;
 
 
-class ArrayProductRepositoryTest extends \PHPUnit\Framework\TestCase
+class ArrayProductRepositoryTest extends TestCase
 {
 
     public function testShouldImplementsProperInterface()

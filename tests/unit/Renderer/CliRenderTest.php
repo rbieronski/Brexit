@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Anguis\Brexit\Tests\Renderer;
+namespace Anguis\Brexit\Tests\unit\Renderer;
 
+use PHPUnit\Framework\TestCase;
 use Anguis\Brexit\Entity\ProductEntity;
 use Anguis\Brexit\PriceCalculation\PriceCalculationInterface;
 use Anguis\Brexit\Repository\ProductRepositoryInterface;
-use PHPUnit\Framework\TestCase;
 use Anguis\Brexit\Renderer\CliRenderer;
 use Anguis\Brexit\Renderer\RendererInterface;
 

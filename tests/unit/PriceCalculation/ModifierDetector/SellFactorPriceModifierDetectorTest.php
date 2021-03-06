@@ -1,6 +1,6 @@
 <?php
 
-namespace Anguis\Brexit\Tests\PriceCalculation\ModifierDetector;
+namespace Anguis\Brexit\Tests\unit\PriceCalculation\ModifierDetector;
 
 
 use PHPUnit\Framework\TestCase;

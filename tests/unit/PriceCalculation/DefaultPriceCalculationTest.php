@@ -1,12 +1,10 @@
 <?php
 
 
-namespace Anguis\Brexit\Tests\PriceCalculation;
+namespace Anguis\Brexit\Tests\unit\PriceCalculation;
 
 use PHPUnit\Framework\TestCase;
 use Anguis\Brexit\PriceCalculation\ModifierDetector\PriceModifierDetectorInterface;
-use Anguis\Brexit\PriceCalculation\ModifierDetector\SellFactorPriceModifierDetector;
-use Anguis\Brexit\PriceCalculation\NotValidExchangeCurrencyRateException;
 use Anguis\Brexit\PriceCalculation\DefaultPriceCalculation;
 use Anguis\Brexit\PriceCalculation\PriceCalculationInterface;
 
