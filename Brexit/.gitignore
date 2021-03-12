@@ -1,0 +1,6 @@
+/.idea/
+/.phpunit.cache/
+/vendor/
+generator.php
+grass-super-big.csv
+ 

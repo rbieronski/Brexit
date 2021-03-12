@@ -1,0 +1,25 @@
+{
+    "name": "anguis/apps2",
+    "description": "Sample project to learn TTD",
+    "type": "project",
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Anguis\\Brexit\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Anguis\\Brexit\\Tests\\": "tests/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rafał Bieroński",
+            "email": "bieronski@yahoo.pl"
+        }
+    ]
+}
